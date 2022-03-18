@@ -23,14 +23,19 @@ const app = new Vue (
                 {
                     text : 'Acqua frizzante',
                     done : false
+                },
+
+                {
+                    text : 'Gelato al pistacchio',
+                    done : true
                 }
             ]
         },
 
 
         methods : {
-            addInTodo : function() {
-
+            deleteItemTodo : function(indexTodo) {
+                this.todoArrayList.splice(indexTodo, 1);
             }
         }
     }
