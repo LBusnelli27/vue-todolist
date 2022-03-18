@@ -11,6 +11,11 @@
     border-radius: 1.3rem;
 }
 
+.my-ul li:hover {
+    background-color: rgb(194, 232, 244);
+    transform: scale(1.01);
+}
+
 .my-ul li i:hover {
     color: red;
     transform: scale(1.2);
