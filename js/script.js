@@ -4,36 +4,26 @@ const app = new Vue (
 
 
         data : {
-            todoArrayList : [
-                {
-                    text : 'Pasta',
-                    done : false
-                },
+            todoArrayList : [],
 
-                {
-                    text : 'Carne',
-                    done : true
-                },
-
-                {
-                    text : 'Sugo',
-                    done : false
-                },
-
-                {
-                    text : 'Acqua frizzante',
-                    done : false
-                },
-
-                {
-                    text : 'Gelato al pistacchio',
-                    done : true
-                }
-            ]
+            newTask : ''
         },
 
 
         methods : {
+            addItemTodo : function() {
+                if (this.newTask.trim() != '') {
+                    this.todoArrayList.push({
+                        text : this.newTask,
+                        done : false
+                    });
+                    this.newTask = '';
+                } else  {
+                    this.newTask = '';
+                }
+                
+            },
+
             deleteItemTodo : function(indexTodo) {
                 this.todoArrayList.splice(indexTodo, 1);
             }

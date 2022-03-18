@@ -6,6 +6,9 @@
 .my-ul li {
     list-style-type: none;
     font-size: 1.5rem;
+
+    border: 2px solid rgba(0, 0, 86, 0.5);
+    border-radius: 1.3rem;
 }
 
 .my-ul li i:hover {
