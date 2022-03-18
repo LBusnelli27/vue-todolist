@@ -22,23 +22,37 @@
     <link rel="stylesheet" href="css/style.css">
 
     <title>Carousel using VueJs</title>
-
 </head>
 <body>
     <main id="app">
-        <div class="container-fluid p-5">
+        <div class="container-fluid px-5">
             <div class="row text-center">
                 <div class="col-12 p-3">
                     <h1>Vue Todo List</h1>
                 </div>
 
-                <div class="col-12 p-4">
-                    
+                <div class="col-12 p-4 mb-5">
+                    <div class="row">
+                        <div class="col-3 offset-4">
+                            <input class="form-control" type="text" aria-label="default input example">
+                        </div>
+                        <div class="col-1">
+                            <button class="btn btn-success">Aggiungi</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 text-start">
+                    <ul class="my-ul p-3">
+                        <li  v-for="(element, index) in todoArrayList" :class="(element.done == true) ? 'text-decoration-line-through' : ''">{{ element.text }}</li>
+                        <h3 class="text-center">Non ci sono todo</h3>
+                    </ul>
+
                 </div>
             </div>
         </div>
     </main>
 
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+.my-ul {
+    background-color: rgb(221, 241, 247);
+    border-radius: 1.3rem;
+}
+
+.my-ul li {
+    list-style-type: none;
+    font-size: 1.5rem;
+}
