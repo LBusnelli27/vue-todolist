@@ -44,8 +44,8 @@
 
                 <div class="col-7 m-auto">
                     <ul class="my-ul p-3">
-                        <li v-for="(element, index) in todoArrayList" :class="(element.done == true) ? 'text-decoration-line-through' : ''" class="mb-2 d-flex justify-content-between align-items-center p-3">
-                            <span>{{ element.text }}</span>
+                        <li v-for="(element, index) in todoArrayList" @click="taskCompleted(index)" :class="(element.done == true) ? 'my-bg-done' : ''" class="mb-2 d-flex justify-content-between align-items-center p-3">
+                            <span :class="(element.done == true) ? 'text-decoration-line-through' : ''">{{ element.text }}</span>
                             <i @click="deleteItemTodo(index)" class="fa-solid fa-trash-can text-end"></i>
                         </li>
                     </ul>
